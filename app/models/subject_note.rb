@@ -1,0 +1,2 @@
+class SubjectNote < ApplicationRecord
+end
