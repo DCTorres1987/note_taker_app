@@ -14,13 +14,6 @@ ActiveRecord::Schema.define(version: 2021_02_17_023122) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.integer "subject_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "notes", force: :cascade do |t|
-    t.integer "category_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -28,13 +21,14 @@ ActiveRecord::Schema.define(version: 2021_02_17_023122) do
 
   create_table "subject_notes", force: :cascade do |t|
     t.string "note"
+    t.integer "subject_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "subjects", force: :cascade do |t|
     t.string "name"
-    t.integer "note_id"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

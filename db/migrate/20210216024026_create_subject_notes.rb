@@ -2,6 +2,7 @@ class CreateSubjectNotes < ActiveRecord::Migration[6.0]
   def change
     create_table :subject_notes do |t|
       t.string :note
+      t.integer :subject_id
 
       t.timestamps
     end
