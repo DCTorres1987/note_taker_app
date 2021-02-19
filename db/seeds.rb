@@ -9,4 +9,5 @@
 User.destroy_all;
 user = User.create(name: 'JohnDoe', password: 'blueboat');
 
-# Note.create(category_id: 1, user_id: 1);
+Category.destroy_all;
+Category.create(name: 'JavaScript', user_id: user.id);
