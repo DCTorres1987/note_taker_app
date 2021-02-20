@@ -12,4 +12,5 @@ user = User.create(name: 'JohnDoe', password: 'blueboat');
 Category.destroy_all;
 category = Category.create(name: 'JavaScript', user_id: user.id);
 
+Subject.destroy_all;
 Subject.create(name: 'Variables', category_id: category.id);
