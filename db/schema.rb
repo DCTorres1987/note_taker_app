@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_023122) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "subject_notes", force: :cascade do |t|
+  create_table "notes", force: :cascade do |t|
     t.string "note"
     t.integer "subject_id"
     t.datetime "created_at", precision: 6, null: false

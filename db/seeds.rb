@@ -15,4 +15,5 @@ category = Category.create(name: 'JavaScript', user_id: user.id);
 Subject.destroy_all;
 subject = Subject.create(name: 'Variables', category_id: category.id);
 
-SubjectNote.create(note: 'There are three types of variables in JavaScript let, const, var', subject_id: subject.id);
+Note.destroy_all;
+Note.create(note: 'There are three types of variables in JavaScript let, const, var', subject_id: subject.id);
